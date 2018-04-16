@@ -1,0 +1,254 @@
+doctype html
+include _variables.pug  
+html(lang=lang)
+    head
+        meta(charset="utf-8")
+        meta(content="IE=edge" http-equiv="X-UA-Compatible")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
+        title #{title}
+        meta(content="index,follow,snippet,archive" name="robots")
+        meta(content=metaDescription name="description")
+        meta(content=metaKeywords lang="cs" name="keywords")
+        meta(content=metaAuthor name="author")
+
+        link(rel="canonical" href=metaURL)
+        meta(property="og:locale" content="cs_CZ")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content=title)
+        meta(property="og:description" content=metaDescription)
+        meta(property="og:url" content=metaURL)
+        meta(property="og:site_name" content=metaSitename)
+        meta(name="twitter:card" content="summary")
+        meta(name="twitter:site" content=metaTwitterName)
+        meta(name="twitter:title" content=title)
+        meta(name="twitter:description" content=metaDescription)
+        meta(name="twitter:image" content=metaTwitterImg)
+        include _css-include.pug  
+    body
+        include _nav.pug
+
+        .page-wrapper
+            .container.page-wrapper__container
+                .menu-container
+                    include _side-menu.pug
+                    .menu-delivery
+                        .menu-delivery__wrap
+                            h5.menu-delivery__title Výhody nákupu #[span.menu-delivery__title-alt v našem eshopu]
+                            a.btn.btn-small.menu-delivery__btn(href="#") Více informací
+                            img.menu-delivery__img(src=URLbase+"img/side-delivery.png")
+                    .menu-tags
+                        a.menu-tags__single.sale(href="#")
+                            .menu-tags__title Akční nabídka
+                            img.menu-tags__img(src=URLbase+"images/tags-sale.svg")
+                        a.menu-tags__single.new(href="#")
+                            .menu-tags__title Novinky
+                            img.menu-tags__img(src=URLbase+"images/tags-new.svg")
+                        a.menu-tags__single.recommended(href="#")
+                            .menu-tags__title Doporučené
+                            img.menu-tags__img(src=URLbase+"images/tags-recommended.svg")
+
+
+                .content-container
+                    section.hero
+                        .hero__container
+                            .hero__swiper
+                                .hero__swiper-wrap
+                                    .swiper-wrapper.hero__swiper-wrapper
+
+                                        .swiper-slide.hero__swiper-slide(data-slide="0")
+                                            .hero__content
+                                                .hero__title 1 CA Aeromax 6 + Yamaha A-S301
+                                                .hero__text Aeromax6+Yas301
+                                                .hero__price-old 44 980 Kč
+                                                .hero__price 31 780 Kč
+                                                .hero__btn
+                                                    a.btn(href="#") Zobrazit nabídku #[span.btn__icon.arrow-icon.right.white]
+                                            .hero__image
+                                                .hero__sale-tag -30% 
+                                                img.swiper-lazy.hero__img(src=URLbase+"img/product-thumb-medium.jpg")
+                                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+
+                                        .swiper-slide.hero__swiper-slide(data-slide="1")
+                                            .hero__content
+                                                .hero__title 2 CA Aeromax 6 + Yamaha A-S301
+                                                .hero__text Aeromax6+Yas301
+                                                .hero__price-old 44 980 Kč
+                                                .hero__price 31 780 Kč
+                                                .hero__btn
+                                                    a.btn(href="#") Zobrazit nabídku #[span.btn__icon.arrow-icon.right.white]
+                                            .hero__image
+                                                .hero__sale-tag -30%
+                                                img.swiper-lazy.hero__img(src=URLbase+"img/product-thumb-medium.jpg")
+                                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+
+                                        .swiper-slide.hero__swiper-slide(data-slide="2")
+                                            .hero__content
+                                                .hero__title 3 CA Aeromax 6 + Yamaha A-S301
+                                                .hero__text Aeromax6+Yas301
+                                                .hero__price-old 44 980 Kč
+                                                .hero__price 31 780 Kč
+                                                .hero__btn
+                                                    a.btn(href="#") Zobrazit nabídku #[span.btn__icon.arrow-icon.right.white]
+                                            .hero__image
+                                                .hero__sale-tag -30%
+                                                img.swiper-lazy.hero__img(src=URLbase+"img/product-thumb-medium.jpg")
+                                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+
+                                        .swiper-slide.hero__swiper-slide(data-slide="3")
+                                            .hero__content
+                                                .hero__title 4 CA Aeromax 6 + Yamaha A-S301
+                                                .hero__text Aeromax6+Yas301
+                                                .hero__price-old 44 980 Kč
+                                                .hero__price 31 780 Kč
+                                                .hero__btn
+                                                    a.btn(href="#") Zobrazit nabídku #[span.btn__icon.arrow-icon.right.white]
+                                            .hero__image
+                                                .hero__sale-tag -30%
+                                                img.swiper-lazy.hero__img(src=URLbase+"img/product-thumb-medium.jpg")
+                                                .swiper-lazy-preloader.swiper-lazy-preloader-white
+
+                                    .swiper-pagination.swiper-pagination-white.swiper-pagination--hero
+                                .swiper-button-prev.swiper-button-prev--hero
+                                .swiper-button-next.swiper-button-next--hero 
+
+
+
+
+                    section.index-products
+
+                        .filter-sort
+                            ul.nav.nav-tabs
+                                li.nav-item
+                                    a.nav-link.active(id="1-index-tab" data-toggle="tab" href="#1-index" role="tab" aria-controls="1-index" aria-selected="true") Akční nabídka
+                                li.nav-item
+                                    a.nav-link(id="2-index-tab" data-toggle="tab" href="#2-index" role="tab" aria-controls="2-index" aria-selected="false") Doporučené
+                                li.nav-item
+                                    a.nav-link(id="3-index-tab" data-toggle="tab" href="#3-index" role="tab" aria-controls="3-index" aria-selected="false") Novinky
+                                li.nav-item
+                                    a.nav-link(id="4-index-tab" data-toggle="tab" href="#4-index" role="tab" aria-controls="4-index" aria-selected="false") Nejprodávanější
+
+                        .tab-content
+                            .tab-pane.fade.show.active(id="1-index" role="tabpanel" aria-labelledby="1-index-tab")            
+                                .swiper-container-4-products-wrap     
+                                    .swiper-container-4-products
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug         
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                    .swiper-pagination.swiper-pagination-white
+                                    .swiper-button-prev.swiper-button-prev--4
+                                    .swiper-button-next.swiper-button-next--4
+
+                            .tab-pane.fade(id="2-index" role="tabpanel" aria-labelledby="2-index-tab")    
+                                .swiper-container-4-products-wrap     
+                                    .swiper-container-4-products
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug         
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                    .swiper-pagination.swiper-pagination-white
+                                    .swiper-button-prev.swiper-button-prev--4
+                                    .swiper-button-next.swiper-button-next--4
+
+                            .tab-pane.fade(id="3-index" role="tabpanel" aria-labelledby="3-index-tab")    
+                                .swiper-container-4-products-wrap     
+                                    .swiper-container-4-products
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug         
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                    .swiper-pagination.swiper-pagination-white
+                                    .swiper-button-prev.swiper-button-prev--4
+                                    .swiper-button-next.swiper-button-next--4
+
+                            .tab-pane.fade(id="4-index" role="tabpanel" aria-labelledby="4-index-tab")    
+                                .swiper-container-4-products-wrap     
+                                    .swiper-container-4-products
+                                        .swiper-wrapper
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug         
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                            .swiper-slide
+                                                include _single-product-cell-small.pug
+                                    .swiper-pagination.swiper-pagination-white
+                                    .swiper-button-prev.swiper-button-prev--4
+                                    .swiper-button-next.swiper-button-next--4
+
+                    include _index-categories.pug
+
+
+        include _news-section.pug
+        
+        include _footer.pug
+
+        include _js-include.pug
+
+        script.
+            var carousel_main = new Swiper('.hero__swiper-wrap', {
+            lazy: true,
+            spaceBetween: 0,
+            grabCursor: true,
+            zoom: false,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination--hero',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next--hero',
+                prevEl: '.swiper-button-prev--hero',
+            },
+            });
+
+
+
