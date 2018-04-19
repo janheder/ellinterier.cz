@@ -46,6 +46,7 @@ html(lang=lang)
                                         .product-detail__under-title
                                             p.product-detail__brand Výrobce: Staník
                                             p.product-detail__code Katalogové číslo: adam90
+                                            p.product-detail__code Záruka: 24 měsíců
 
 
 
@@ -203,12 +204,15 @@ html(lang=lang)
 
                                         .product-detail-main__price-wrap
                                             .product-detail-main__price-old
+                                                p.product-detail-main__price-text Původní cena
                                                 small.product-detail-main__price-old-percentage -20%
                                                 p.product-detail-main__price-old-text #[span.product-detail-main__price-old-span 14 290 Kč] (ušetříte 6 598 Kč)
 
                                             .product-detail-main__price
+                                                p.product-detail-main__price-text Celková cena
                                                 h2.product-detail-main__price-title 8 489 Kč
                                             .product-detail-main__price-dph
+                                                p.product-detail-main__price-text Cena bez DPH 
                                                 p.product-detail-main__price-dph-text 7 016 Kč bez DPH   
 
                                         .product-detail-main__stock
@@ -218,63 +222,63 @@ html(lang=lang)
                                         form(method="post" name="product_detail_form" id="product_detail_form")
 
                                             .product-variations
-                                                h2.product-variations__title Další varianty produktu
+                                                h2.product-variations__title Vyberte provedení
                                                 .swiper-container-var-products-wrap
                                                     .swiper-container-var-products
                                                         .swiper-wrapper
                                                             .swiper-slide
                                                                 label.variation-single
                                                                     img.variation-single__img(src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-                                                                    h6.variation-single__title Název varianty
+                                                                    h6.variation-single__title Název provedení
                                                                     p.variation-single__text +0 Kč
                                                                     input(type="radio" name="var")
 
                                                             .swiper-slide
                                                                 label.variation-single
                                                                     img.variation-single__img(src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-                                                                    h6.variation-single__title Název varianty
+                                                                    h6.variation-single__title Název provedení
                                                                     p.variation-single__text +0 Kč
                                                                     input(type="radio" name="var")
 
                                                             .swiper-slide
                                                                 label.variation-single
                                                                     img.variation-single__img(src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-                                                                    h6.variation-single__title Název varianty
+                                                                    h6.variation-single__title Název provedení
                                                                     p.variation-single__text +0 Kč
                                                                     input(type="radio" name="var")
 
                                                             .swiper-slide
                                                                 label.variation-single
                                                                     img.variation-single__img(src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-                                                                    h6.variation-single__title Název varianty
+                                                                    h6.variation-single__title Název provedení
                                                                     p.variation-single__text +0 Kč
                                                                     input(type="radio" name="var")  
 
                                                             .swiper-slide
                                                                 label.variation-single
                                                                     img.variation-single__img(src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-                                                                    h6.variation-single__title Název varianty
+                                                                    h6.variation-single__title Název provedení
                                                                     p.variation-single__text +0 Kč
                                                                     input(type="radio" name="var")
 
                                                             .swiper-slide
                                                                 label.variation-single
                                                                     img.variation-single__img(src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-                                                                    h6.variation-single__title Název varianty
+                                                                    h6.variation-single__title Název provedení
                                                                     p.variation-single__text +0 Kč
                                                                     input(type="radio" name="var")
 
                                                             .swiper-slide
                                                                 label.variation-single
                                                                     img.variation-single__img(src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-                                                                    h6.variation-single__title Název varianty
+                                                                    h6.variation-single__title Název provedení
                                                                     p.variation-single__text +0 Kč
                                                                     input(type="radio" name="var")
 
                                                             .swiper-slide
                                                                 label.variation-single
                                                                     img.variation-single__img(src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-                                                                    h6.variation-single__title Název varianty
+                                                                    h6.variation-single__title Název provedení
                                                                     p.variation-single__text +0 Kč
                                                                     input(type="radio" name="var")
                                                                     
@@ -340,8 +344,6 @@ html(lang=lang)
                                     li.nav-item.product-description__tab
                                         a.nav-link.product-description__tab-link.active(data-toggle="tab" href="#product-description-1" role="tab") Popis produktu
                                     li.nav-item.product-description__tab
-                                        a.nav-link.product-description__tab-link(data-toggle="tab" href="#product-description-2" role="tab") Parametry
-                                    li.nav-item.product-description__tab
                                         a.nav-link.product-description__tab-link(data-toggle="tab" href="#product-description-3" role="tab") Balení obsahuje
 
 
@@ -355,11 +357,6 @@ html(lang=lang)
                                                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
                                                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
                                                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
-           
-                                    .tab-pane.product-description__tab-content(id="product-description-2" role="tabpanel" aria-expanded="false")
-                                        a.product-description__collapse.collapsed(data-toggle="collapse" href="#product-description-c-2" aria-controls="product-description-c-2" aria-expanded="false") Technické parametry
-                                        .panel-collapse.collapse.product-description__collapse-wrap(id="product-description-c-2")
-                                            .product-description__content
                                                 .product-description__parameters
                                                     table.table
                                                         thead
@@ -367,26 +364,45 @@ html(lang=lang)
                                                             th Hodnota
                                                         tbody
                                                             tr
-                                                                td Výstupní výkon
-                                                                td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+                                                                td Délka vnější
+                                                                td 187 cm
                                                             tr
-                                                                td Výstupní výkon
-                                                                td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+                                                                td Délka vnější
+                                                                td 187 cm
                                                             tr
-                                                                td Výstupní výkon
-                                                                td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+                                                                td Délka vnější
+                                                                td 187 cm
                                                             tr
-                                                                td Výstupní výkon
-                                                                td 160 W/k (6 Ω, 1 kHz, 1%, 1 kanál řízený, IEC); 170 W/k (6 Ω, 1 kHz, 10%, 1 kanál řízený, JEITA)
+                                                                td Délka vnější
+                                                                td 187 cm
+
+
+     
+
 
                                     .tab-pane.product-description__tab-content(id="product-description-3" role="tabpanel" aria-expanded="false")
                                         a.product-description__collapse.collapsed(data-toggle="collapse" href="#product-description-c-3" aria-controls="product-description-c-3" aria-expanded="false") Přílohy produktu
                                         .panel-collapse.collapse.product-description__collapse-wrap(id="product-description-c-3")
                                             .product-description__content
-                                                a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
-                                                a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
-                                                a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
-                                                a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
+                                                ul
+                                                    li Postel z masivu borovice
+                                                    li Laťkové rošty na horní i spodní postel
+                                                    li Spojovací materiál na kompletní stavbu postele
+
+                                                .product-description__file-wrap   
+                                                    a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
+                                                    a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
+                                                    a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
+                                                    a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
+
+                            .product-similar
+                                h2.product-accessories__heading Příslušenství
+                                .product-grid
+                                    include _single-product-cell.pug
+                                    include _single-product-cell.pug
+                                    include _single-product-cell.pug
+                                    include _single-product-cell.pug
+
 
                             .product-similar
                                 h2.product-accessories__heading Obdobné produkty
@@ -452,7 +468,7 @@ html(lang=lang)
             var carousel_var_products = new Swiper('.swiper-container-var-products', {
             lazy: true,
             spaceBetween: 1,
-            slidesPerView: 5,
+            slidesPerView: 4,
             grabCursor: true,
             zoom: false,
             observer: true,

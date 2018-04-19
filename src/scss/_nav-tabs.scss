@@ -19,7 +19,7 @@
             cursor: pointer;
 
             &.active{
-                background: transparent;
+                background: $bg-white;
                 border-bottom-color: $white;
             }
             &:hover, &:active, &:focus{

@@ -60,28 +60,62 @@ html(lang=lang)
                         .top-products
                             .top-products__title-wrap
                                 h2.top-products__title Nejprodávanější produkty
-                            .swiper-container-5-products-wrap
-                                .swiper-container-5-products 
-                                    .swiper-wrapper
-                                        .swiper-slide
-                                            include _single-product-cell-top.pug
-                                        .swiper-slide
-                                            include _single-product-cell-top.pug
-                                        .swiper-slide
-                                            include _single-product-cell-top.pug
-                                        .swiper-slide
-                                            include _single-product-cell-top.pug
-                                        .swiper-slide
-                                            include _single-product-cell-top.pug
-                                        .swiper-slide
-                                            include _single-product-cell-top.pug
-                                        .swiper-slide
-                                            include _single-product-cell-top.pug
-                                        .swiper-slide
-                                            include _single-product-cell-top.pug
-                                .swiper-button-prev.swiper-button-prev--5
-                                .swiper-button-next.swiper-button-next--5
+                                
+                            .cart-item-single
+                                .cart-item-single__col-1  
+                                    .cart-item-single__rank-wrap
+                                        span.cart-item-single__rank 1
+                                    .cart-item-single__thumb-wrap
+                                        .cart-item-single__thumb
+                                            img.cart-item-single__img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
 
+                                .cart-item-single__col-2   
+                                    .cart-item-single__name-wrap
+                                        p.cart-item-single__name #{ProductName}
+                                        p.cart-item-single__stock Dostupné skladem   
+
+                                    .cart-item-single__inner    
+                                        .cart-item-single__sum-wrap.text-right
+                                            span.cart-item-single__price-old 14 290 Kč
+                                            p.cart-item-single__sum #[span 8 489] Kč
+
+
+                            .cart-item-single
+                                .cart-item-single__col-1  
+                                    .cart-item-single__rank-wrap
+                                        span.cart-item-single__rank 2
+                                    .cart-item-single__thumb-wrap
+                                        .cart-item-single__thumb
+                                            img.cart-item-single__img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+
+                                .cart-item-single__col-2   
+                                    .cart-item-single__name-wrap
+                                        p.cart-item-single__name #{ProductName}
+                                        p.cart-item-single__stock Dostupné skladem   
+
+                                    .cart-item-single__inner    
+                                        .cart-item-single__sum-wrap.text-right
+                                            span.cart-item-single__price-old 14 290 Kč
+                                            p.cart-item-single__sum #[span 8 489] Kč
+
+
+                            .cart-item-single
+                                .cart-item-single__col-1  
+                                    .cart-item-single__rank-wrap
+                                        span.cart-item-single__rank 3
+                                    .cart-item-single__thumb-wrap
+                                        .cart-item-single__thumb
+                                            img.cart-item-single__img.lazy(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+
+                                .cart-item-single__col-2   
+                                    .cart-item-single__name-wrap
+                                        p.cart-item-single__name #{ProductName}
+                                        p.cart-item-single__stock Dostupné skladem   
+
+                                    .cart-item-single__inner    
+                                        .cart-item-single__sum-wrap.text-right
+                                            span.cart-item-single__price-old 14 290 Kč
+                                            p.cart-item-single__sum #[span 8 489] Kč
                         .filter-main
                             a.filter-main__collapse(data-toggle="collapse" href="#product-filter" aria-expanded="false" aria-controls="product-filter") Filtr produktů
                             .panel-collapse.collapse.filter-main__collapse-wrap(id="product-filter")   
