@@ -28,22 +28,31 @@
     @include flex-direction(row);
 }
 .hero__content{
-    background: $bg-white;
+    background: transparent;
     @include flexbox();
     @include flex-grow(1);
     @include flex-basis(0);
     @include flex-direction(column);
     @include justify-content(center);
-    padding: 5rem;
+    padding: 8rem 8rem;
     padding-right: 0;
+}
+.swiper-button-prev--hero, .swiper-button-next--hero{
+    border: 0;
 }
 .hero__title{
     font-weight: 700;
     font-family: $font-family-secondary;
     color: $text-primary;
-    font-size: 4rem;
+    font-size: 4.8rem;
     margin: 0;
     line-height: 1.2;
+    margin-bottom: 2rem;
+
+    span{
+        font-size: 3.6rem;
+        display: block;
+    }
 }
 .hero__text{
     font-weight: 400;
@@ -97,9 +106,7 @@
 .hero__swiper{
     position: relative;
 }
-.swiper-pagination--hero{
-    display: none;
-}
+
 .hero__swiper-tabs{
     background: $bg-white;
     overflow: hidden;
@@ -376,6 +383,7 @@
 
 .index-products{
     padding-bottom: 6rem; 
+    margin-top: 2rem;
 }
 @media screen and (max-width:991px){
     .index-products{

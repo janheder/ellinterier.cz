@@ -26,7 +26,7 @@ html(lang=lang)
         include _css-include.pug  
     body
         include _nav.pug
-
+ 
         .page-wrapper
             .container.page-wrapper__container
                 .menu-container
@@ -55,57 +55,29 @@ html(lang=lang)
                                 .hero__swiper-wrap
                                     .swiper-wrapper.hero__swiper-wrapper
 
-                                        .swiper-slide.hero__swiper-slide(data-slide="0")
+                                        .swiper-slide.hero__swiper-slide.post__image-container(data-slide="0")
+                                            img.swiper-lazy.post__featured-image(src=URLbase+"img/hero1.jpg")
+                                            .swiper-lazy-preloader.swiper-lazy-preloader-white
                                             .hero__content
-                                                .hero__title 1 CA Aeromax 6 + Yamaha A-S301
-                                                .hero__text Aeromax6+Yas301
-                                                .hero__price-old 44 980 Kč
-                                                .hero__price 31 780 Kč
+                                                h1.hero__title #[span Široká nabídka] Dětských pokojů
                                                 .hero__btn
                                                     a.btn(href="#") Zobrazit nabídku #[span.btn__icon.arrow-icon.right.white]
-                                            .hero__image
-                                                .hero__sale-tag -30% 
-                                                img.swiper-lazy.hero__img(src=URLbase+"img/product-thumb-medium.jpg")
-                                                .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-                                        .swiper-slide.hero__swiper-slide(data-slide="1")
+                                        .swiper-slide.hero__swiper-slide.post__image-container(data-slide="1")
+                                            img.swiper-lazy.post__featured-image(src=URLbase+"img/hero1.jpg")
+                                            .swiper-lazy-preloader.swiper-lazy-preloader-white
                                             .hero__content
-                                                .hero__title 2 CA Aeromax 6 + Yamaha A-S301
-                                                .hero__text Aeromax6+Yas301
-                                                .hero__price-old 44 980 Kč
-                                                .hero__price 31 780 Kč
+                                                h1.hero__title #[span Široká nabídka] Dětských pokojů
                                                 .hero__btn
                                                     a.btn(href="#") Zobrazit nabídku #[span.btn__icon.arrow-icon.right.white]
-                                            .hero__image
-                                                .hero__sale-tag -30%
-                                                img.swiper-lazy.hero__img(src=URLbase+"img/product-thumb-medium.jpg")
-                                                .swiper-lazy-preloader.swiper-lazy-preloader-white
 
-                                        .swiper-slide.hero__swiper-slide(data-slide="2")
+                                        .swiper-slide.hero__swiper-slide.post__image-container(data-slide="2")
+                                            img.swiper-lazy.post__featured-image(src=URLbase+"img/hero1.jpg")
+                                            .swiper-lazy-preloader.swiper-lazy-preloader-white
                                             .hero__content
-                                                .hero__title 3 CA Aeromax 6 + Yamaha A-S301
-                                                .hero__text Aeromax6+Yas301
-                                                .hero__price-old 44 980 Kč
-                                                .hero__price 31 780 Kč
+                                                h1.hero__title #[span Široká nabídka] Dětských pokojů
                                                 .hero__btn
                                                     a.btn(href="#") Zobrazit nabídku #[span.btn__icon.arrow-icon.right.white]
-                                            .hero__image
-                                                .hero__sale-tag -30%
-                                                img.swiper-lazy.hero__img(src=URLbase+"img/product-thumb-medium.jpg")
-                                                .swiper-lazy-preloader.swiper-lazy-preloader-white
-
-                                        .swiper-slide.hero__swiper-slide(data-slide="3")
-                                            .hero__content
-                                                .hero__title 4 CA Aeromax 6 + Yamaha A-S301
-                                                .hero__text Aeromax6+Yas301
-                                                .hero__price-old 44 980 Kč
-                                                .hero__price 31 780 Kč
-                                                .hero__btn
-                                                    a.btn(href="#") Zobrazit nabídku #[span.btn__icon.arrow-icon.right.white]
-                                            .hero__image
-                                                .hero__sale-tag -30%
-                                                img.swiper-lazy.hero__img(src=URLbase+"img/product-thumb-medium.jpg")
-                                                .swiper-lazy-preloader.swiper-lazy-preloader-white
 
                                     .swiper-pagination.swiper-pagination-white.swiper-pagination--hero
                                 .swiper-button-prev.swiper-button-prev--hero
@@ -148,9 +120,9 @@ html(lang=lang)
                                                 include _single-product-cell-small.pug
                                             .swiper-slide
                                                 include _single-product-cell-small.pug
-                                    .swiper-pagination.swiper-pagination-white
-                                    .swiper-button-prev.swiper-button-prev--4
-                                    .swiper-button-next.swiper-button-next--4
+                                        .swiper-pagination.swiper-pagination-white
+                                        .swiper-button-prev.swiper-button-prev--4
+                                        .swiper-button-next.swiper-button-next--4
 
                             .tab-pane.fade(id="2-index" role="tabpanel" aria-labelledby="2-index-tab")    
                                 .swiper-container-4-products-wrap     

@@ -303,19 +303,19 @@ var carousel_4_products = new Swiper('.swiper-container-4-products', {
   breakpoints: {
   1200: {
     slidesPerView: 4,
-    spaceBetween: 20,
+    spaceBetween: 1,
   },
   991: {
     slidesPerView: 3,
-    spaceBetween: 20,
+    spaceBetween: 1,
   },
   500: {
     slidesPerView: 3,
-    spaceBetween: 10,
+    spaceBetween: 1,
   },
   320: {
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 1,
   }
 }
 });

@@ -1139,6 +1139,7 @@
         font-size: 1.5rem;
         padding-top: 10px;
         padding-bottom: 10px;
+        border: 0;
 
         &:hover, &:active, &:focus{
             background: $bg-white;
@@ -1239,7 +1240,7 @@
         overflow: hidden;
         height: 100%;
         width: 100%;
-        margin-left: 240px;
+        margin-left: 0px;
     }
     body.active-right {
         overflow: hidden;
@@ -1253,7 +1254,7 @@
     .navbar-menu__collapse{
         position: fixed;
         left: 0px;
-        top: 0px;
+        top: 56px;
         display: block;
         @include translate(-100%,0%);
         height: 100% !important;
@@ -1261,6 +1262,7 @@
         @include transition(0.3s transform ease);
         overflow-y: auto;
         overflow-x: hidden;
+        z-index: 99;
     }
     .navbar-menu__collapse.collapsing, body.active .navbar-menu__collapse, body.active .navbar-menu__collapse.collapsing {
         @include translate(0%,0%);
@@ -1446,4 +1448,10 @@ nav.navbar.scroll{
     position: absolute;
     left: -20px;
     height: 80px;
+}
+
+@media screen and (max-width:991px){
+    .menu-delivery, .menu-tags{
+        display: none;
+    }
 }

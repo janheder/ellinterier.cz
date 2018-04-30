@@ -123,34 +123,34 @@ html(lang=lang)
                                                 .swiper-button-prev.swiper-button-prev--product 
                                                 .swiper-button-next.swiper-button-next--product
 
-                                            .product-detail-gallery-responsive-thumbs
-                                                .product-detail-gallery-responsive-thumbs__container                                      
-                                                    .swiper-wrapper.product-detail-gallery-responsive-thumbs__wrapper
+                                        .product-detail-gallery-responsive-thumbs
+                                            .product-detail-gallery-responsive-thumbs__container                                      
+                                                .swiper-wrapper.product-detail-gallery-responsive-thumbs__wrapper
+                                                    
+                                                    .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
+                                                        .product-detail-gallery-responsive-thumbs__slide-single
+                                                            img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                    
+                                                    .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
+                                                        .product-detail-gallery-responsive-thumbs__slide-single
+                                                            img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                    
+                                                    .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
+                                                        .product-detail-gallery-responsive-thumbs__slide-single
+                                                            img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
                                                         
-                                                        .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
-                                                            .product-detail-gallery-responsive-thumbs__slide-single
-                                                                img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
-                                                        
-                                                        .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
-                                                            .product-detail-gallery-responsive-thumbs__slide-single
-                                                                img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
-                                                        
-                                                        .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
-                                                            .product-detail-gallery-responsive-thumbs__slide-single
-                                                                img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                    .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
+                                                        .product-detail-gallery-responsive-thumbs__slide-single
+                                                            img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
                                                             
-                                                        .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
-                                                            .product-detail-gallery-responsive-thumbs__slide-single
-                                                                img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
-                                                                
-                                                        .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
-                                                            .product-detail-gallery-responsive-thumbs__slide-single
-                                                                img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
-                                                                
-                                                        .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
-                                                            .product-detail-gallery-responsive-thumbs__slide-single
-                                                                img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
-                                                        
+                                                    .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
+                                                        .product-detail-gallery-responsive-thumbs__slide-single
+                                                            img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                            
+                                                    .swiper-slide.product-detail-gallery-responsive-thumbs__slide.swiper-slide-active
+                                                        .product-detail-gallery-responsive-thumbs__slide-single
+                                                            img.lazy.product-detail-gallery-responsive-thumbs__img(src=URLbase+"img/placeholder-200x200.png" data-src=URLbase+"img/product-thumb-small.jpg")
+                                                    
 
 
                                         .product-detail-gallery-thumbs(itemscope itemtype="http://schema.org/ImageGallery")
@@ -506,4 +506,19 @@ html(lang=lang)
             });
             $( ".pswp__button--arrow--right" ).click(function() {
                 $( ".product-detail-images .swiper-button-next" ).click();
+            });
+
+            $(function(){
+                $(".number-stepper__btn-up").click(function(){
+                    var SpinnerInput = $(this).closest('.number-stepper').find('.number-stepper__input');
+                    if ($(SpinnerInput).val() < 99){
+                        $(SpinnerInput).val( Number($(SpinnerInput).val()) + 1 );
+                    }
+                });
+                $(".number-stepper__btn-down").click(function(){
+                    var SpinnerInput = $(this).closest('.number-stepper').find('.number-stepper__input');
+                    if ($(SpinnerInput).val() > 1){
+                        $(SpinnerInput).val( Number($(SpinnerInput).val()) - 1 );
+                    }
+                });
             });
