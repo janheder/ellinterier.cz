@@ -297,7 +297,7 @@
 /* ========================================================================== */
 
 .index-categories{
-    padding: 8rem 0;
+    padding: 0;
     background: $bg-white;
 }
 .index-categories__title{
@@ -314,25 +314,28 @@
 .index-categories__single{
     height: 100%; 
     border-radius: $border-radius-primary;
-    border: 1px solid $border-primary;
-    padding: 20px;
     position: relative;
     z-index: 1;
     overflow: hidden;
+    display: block;
+    height: 24rem;
+}
+.col-xl-4.index-categories__single-wrap .index-categories__single{
+    height: 16rem;
 }
 .index-categories__img{
-    position: absolute;
-    right: -50%;
-    bottom: -50%;
     z-index: -1;
 }
 .index-categories__single-title{
-    color: $text-primary;
-    padding: 1.5rem 0 0.5rem 0;
+    color: $text-white;
+    padding: 0;
     margin: 0;
     font-family: $font-family-secondary;
     font-weight: 700;
     font-size: 2.4rem;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
 }
 .index-categories__wrap{
     padding-top: 1.5rem;
@@ -371,11 +374,7 @@
         margin: 0 auto;
     }
 }
-@media screen and (min-width:992px){
-    .index-categories__single-wrap:last-child{
-        display: none;
-    }
-}
+
 
 /* ========================================================================== */
 /* INDEX PRODUCTS */
@@ -386,9 +385,7 @@
     margin-top: 2rem;
 }
 @media screen and (max-width:991px){
-    .index-products{
-        padding-bottom: 0; 
-    }
+
 }
 
 /* ========================================================================== */
@@ -584,4 +581,48 @@
 
 .news-row{
     margin-top: 10px;
+}
+
+/* ========================================================================== */
+/* INDEX BANNERS */
+/* ========================================================================== */
+
+.index-banners{
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(center);
+    margin:0 -10px;
+    padding-top: 2rem;
+}
+.index-banners__single{
+    display: block;
+    padding:0 10px;
+    width: 100%;
+}
+.index-banners__container{
+    height: 160px;
+    display: block;
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    padding-left: 2rem;
+}
+.index-banners__title{
+    color: $text-white;
+
+    font-size: 3rem;
+
+    & span{
+        display: block;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:768px){
+    .index-banners{
+        @include flex-direction(column);
+    }
+    .index-banners__single{
+        padding: 10px;
+    }
 }

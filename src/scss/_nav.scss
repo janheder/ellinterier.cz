@@ -69,7 +69,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    @include flexbox;
+    @include flexbox();
     @include flex-direction(row);
     @include justify-content(flex-start);
     @include align-items(center);  
@@ -679,7 +679,7 @@
         margin: 0;
         padding: 8px 0;
         order: 3;
-        display: block;
+        @include flexbox();
         text-align: center;
     }
     .navbar-user{
@@ -872,6 +872,10 @@
         background: $border-primary;
     }
 }
+.menu-container .navbar{
+    @include box-shadow(0px,0,10px,$black-transparent-25);
+    z-index: 6;
+}
 .menu-container__collapse{
     width: 100%;
     background: $brand-primary;
@@ -1013,10 +1017,28 @@
     .nav-item__dropdown{
         z-index: 8;
 
+        &.show .nav-item__link{
+            border-bottom: 1px solid $white-transparent;
+        }   
         &:hover .dropdown-toggle, &.show .dropdown-toggle{
             background: $brand-primary;
             color: $text-white;
             z-index: 8;
+            &::before{
+                background: $bg-white;
+            }
+            &::after{
+                background: $bg-white;
+            }
+        }
+         &.show .dropdown-toggle{
+
+            &::before{
+                display: none;
+            }
+            &::after{
+                background: $bg-white;
+            }
         }
         & a:not([href]):not([tabindex]):focus, & a:not([href]):not([tabindex]):hover {
             color: $text-white;
@@ -1027,13 +1049,21 @@
         position: relative;   
     }
     .nav-item__link{
+        @include transition(0.1s ease all);
+
         &:hover, &:active, &:focus{
             background: $brand-primary;
             color: $text-white;
+
+            &::before{
+                background: $bg-white;
+            }
+            &::after{
+                background: $bg-white;
+            }
         }
     }
     .nav-item__dropdown-menu{
-        @include box-shadow(0px,0,10px,$black-transparent-25);
         z-index: 7;
         background: $brand-primary;
         margin: 0;
@@ -1069,7 +1099,7 @@
         font-size: 1.4rem;
         min-height: 3.6rem;
         line-height: 1.5;
-        padding: 2rem 3rem;
+        padding: 2rem 2rem;
         @include flexbox();
         @include flex-direction(column);
         @include justify-content(center);
@@ -1312,8 +1342,23 @@ nav.navbar.scroll{
     .navbar{
         padding:0;
     
-        .navbar-brand img{
-            height: 100%;
+        .navbar-brand .navbar-brand__img{
+            height: 32px;
+        }
+    }
+}
+.navbar-brand-responsive{
+    display: none;
+}
+@media screen and (max-width:400px){
+    .navbar{
+
+        .navbar-brand .navbar-brand__img{
+            display: none;
+        }
+        .navbar-brand-responsive{
+            height: 20px;
+            display: block;
         }
     }
 }

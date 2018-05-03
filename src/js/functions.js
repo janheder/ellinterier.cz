@@ -292,6 +292,8 @@ var carousel_4_products = new Swiper('.swiper-container-4-products', {
   slidesPerView: 4,
   grabCursor: true,
   zoom: false,
+  observer: true,
+  observeParents: true,
   pagination: {
     el: '.swiper-pagination--4',
     clickable: true,
@@ -309,8 +311,8 @@ var carousel_4_products = new Swiper('.swiper-container-4-products', {
     slidesPerView: 3,
     spaceBetween: 1,
   },
-  500: {
-    slidesPerView: 3,
+  550: {
+    slidesPerView: 2,
     spaceBetween: 1,
   },
   320: {
@@ -319,6 +321,7 @@ var carousel_4_products = new Swiper('.swiper-container-4-products', {
   }
 }
 });
+
 
 //SWIPER 5 PRODUCTS 
 

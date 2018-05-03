@@ -36,6 +36,7 @@ html(lang=lang)
                         include _side-menu.pug
                 .content-container
                     include _breadcrumb.pug
+                    include _modal-question.pug
                 main
                     .product-detail
                         .container
@@ -309,7 +310,7 @@ html(lang=lang)
                                                 .product-detail-main__free-delivery-text-wrap
                                                     p.product-detail-main__free-delivery-text Při nákupu nad 5 000 Kč doprava zdarma
 
-                                        a.product-detail-main__question(href="#") Dotaz na prodejce
+                                        .product-detail-main__question(data-toggle="modal" data-target="#modal-question") Dotaz na prodejce
 
 
 

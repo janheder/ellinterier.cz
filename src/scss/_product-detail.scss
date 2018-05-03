@@ -447,6 +447,8 @@
     background: $bg-dark;
     padding: 10px 20px;
     color: $text-white;
+    display: inline-block;
+    cursor: pointer;
 
     &:hover, &:active, &:focus{
         color: $text-white;

@@ -56,7 +56,7 @@ html(lang=lang)
                                     .swiper-wrapper.hero__swiper-wrapper
 
                                         .swiper-slide.hero__swiper-slide.post__image-container(data-slide="0")
-                                            img.swiper-lazy.post__featured-image(src=URLbase+"img/hero1.jpg")
+                                            img.swiper-lazy.post__featured-image(src=URLbase+"img/hero1.jpg" alt="#" title="#")
                                             .swiper-lazy-preloader.swiper-lazy-preloader-white
                                             .hero__content
                                                 h1.hero__title #[span Široká nabídka] Dětských pokojů
@@ -64,7 +64,7 @@ html(lang=lang)
                                                     a.btn(href="#") Zobrazit nabídku #[span.btn__icon.arrow-icon.right.white]
 
                                         .swiper-slide.hero__swiper-slide.post__image-container(data-slide="1")
-                                            img.swiper-lazy.post__featured-image(src=URLbase+"img/hero1.jpg")
+                                            img.swiper-lazy.post__featured-image(src=URLbase+"img/hero1.jpg" alt="#" title="#")
                                             .swiper-lazy-preloader.swiper-lazy-preloader-white
                                             .hero__content
                                                 h1.hero__title #[span Široká nabídka] Dětských pokojů
@@ -72,7 +72,7 @@ html(lang=lang)
                                                     a.btn(href="#") Zobrazit nabídku #[span.btn__icon.arrow-icon.right.white]
 
                                         .swiper-slide.hero__swiper-slide.post__image-container(data-slide="2")
-                                            img.swiper-lazy.post__featured-image(src=URLbase+"img/hero1.jpg")
+                                            img.swiper-lazy.post__featured-image(src=URLbase+"img/hero1.jpg" alt="#" title="#")
                                             .swiper-lazy-preloader.swiper-lazy-preloader-white
                                             .hero__content
                                                 h1.hero__title #[span Široká nabídka] Dětských pokojů
@@ -84,7 +84,16 @@ html(lang=lang)
                                 .swiper-button-next.swiper-button-next--hero 
 
 
+                    section.index-banners
+                        .index-banners__single
+                            .index-banners__container.post__image-container
+                                img.post__featured-image(src=URLbase+"img/index-banner-1.jpg" alt="#")
+                                h4.index-banners__title Doprava zdarma #[span při nákupu nad 5 000 Kč]
 
+                        .index-banners__single
+                            .index-banners__container.post__image-container
+                                img.post__featured-image(src=URLbase+"img/index-banner-2.jpg" alt="#")
+                                h4.index-banners__title Vlastní sklad #[span s více jak 3 000 položkami]
 
                     section.index-products
 
@@ -144,9 +153,9 @@ html(lang=lang)
                                                 include _single-product-cell-small.pug
                                             .swiper-slide
                                                 include _single-product-cell-small.pug
-                                    .swiper-pagination.swiper-pagination-white
-                                    .swiper-button-prev.swiper-button-prev--4
-                                    .swiper-button-next.swiper-button-next--4
+                                        .swiper-pagination.swiper-pagination-white
+                                        .swiper-button-prev.swiper-button-prev--4
+                                        .swiper-button-next.swiper-button-next--4
 
                             .tab-pane.fade(id="3-index" role="tabpanel" aria-labelledby="3-index-tab")    
                                 .swiper-container-4-products-wrap     
@@ -168,9 +177,9 @@ html(lang=lang)
                                                 include _single-product-cell-small.pug
                                             .swiper-slide
                                                 include _single-product-cell-small.pug
-                                    .swiper-pagination.swiper-pagination-white
-                                    .swiper-button-prev.swiper-button-prev--4
-                                    .swiper-button-next.swiper-button-next--4
+                                        .swiper-pagination.swiper-pagination-white
+                                        .swiper-button-prev.swiper-button-prev--4
+                                        .swiper-button-next.swiper-button-next--4
 
                             .tab-pane.fade(id="4-index" role="tabpanel" aria-labelledby="4-index-tab")    
                                 .swiper-container-4-products-wrap     
@@ -192,9 +201,9 @@ html(lang=lang)
                                                 include _single-product-cell-small.pug
                                             .swiper-slide
                                                 include _single-product-cell-small.pug
-                                    .swiper-pagination.swiper-pagination-white
-                                    .swiper-button-prev.swiper-button-prev--4
-                                    .swiper-button-next.swiper-button-next--4
+                                        .swiper-pagination.swiper-pagination-white
+                                        .swiper-button-prev.swiper-button-prev--4
+                                        .swiper-button-next.swiper-button-next--4
 
                     include _index-categories.pug
 
