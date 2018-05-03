@@ -66,6 +66,17 @@ footer{
     margin-left: 50px;
     min-width: 520px;
     max-width: 100%;
+
+    & form{
+        position: relative;
+    }
+}
+.footer-bar__legal{
+    color: $text-white;
+
+    & a:hover, & a:focus, & a:active{
+        color: $text-white;
+    }
 }
 .footer-bar__input{
     border: 0;
@@ -108,7 +119,7 @@ footer{
     @include justify-content(center);
     @include flex-grow(1);
     @include flex-basis(0);
-    padding: 30px 20px;
+    padding: 5rem 20px;
     border-right: 1px solid $white-transparent;
 
     &:first-child{
