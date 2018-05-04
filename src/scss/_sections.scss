@@ -536,6 +536,11 @@
         content: none;
     }
 }
+@media screen and (max-width: 575px){
+    .page-heading--category{ 
+        margin-top: 20px;
+    }
+}
 .page-heading--category__title{ 
     font-size: 3.6rem;
     font-family: $font-family-alt;

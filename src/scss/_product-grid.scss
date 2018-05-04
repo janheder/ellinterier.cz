@@ -140,12 +140,13 @@
 
     & .swiper-slide {
         text-align: center;
-        font-size: 18px;
+        font-size: 1.7rem;
         background: $white;
         /* Center slide text vertically */
         @include flexbox();
         @include justify-content(center);
         @include align-items(center);
+        height: auto;
     }
 }
 @media screen and (max-width:991px){
