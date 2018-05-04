@@ -694,7 +694,19 @@
         }
     }
 }
-
+@media screen and (max-width: 360px){
+    .product-detail-main__cta{
+        @include flex-direction(column);
+    }
+    .product-detail-main__cta-button-wrap{
+        padding: 0;
+        padding-top: 10px;
+    }
+    .product-detail-main__cta-number-stepper{
+        min-width: 100%;
+        max-width: none;
+    }
+}
 
 .product-similar{
     margin-top: 6rem;
