@@ -198,3 +198,10 @@
         }
     }   
 }
+
+@media screen and (max-width:500px){
+    .swiper-container-5-products .single-product-cell .single-product-cell-bottom .single-product-cell-delivery-info .single-product-cell-delivery p{
+        text-align: center;
+        margin-top: 10px;
+    }
+}
