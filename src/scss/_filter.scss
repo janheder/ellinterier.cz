@@ -175,6 +175,7 @@
     @include flexbox();
     @include flex-direction(row);
     @include flex-wrap(wrap);
+    margin: 0 -5px;
     margin-bottom: 3rem;
 }
 .filter-badges__single{
@@ -186,8 +187,9 @@
     @include justify-content(center);
     @include align-items(center);
     overflow: hidden;
-    margin: 5px 0;
+    margin: 5px;
 }
+
 .filter-badges__title{
     font-size: 13px;
     color: $text-white;
