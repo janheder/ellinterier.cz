@@ -21,7 +21,7 @@ html(lang=lang)
         meta(name="twitter:card" content="summary")
         meta(name="twitter:site" content=metaTwitterName)
         meta(name="twitter:title" content=title)
-        meta(name="twitter:description" content=metaDescription)
+        meta(name="twitter:description" content=metaDescription) 
         meta(name="twitter:image" content=metaTwitterImg)
         include _css-include.pug  
     body
@@ -190,6 +190,9 @@ html(lang=lang)
                                                                 option(value="cz") Česká republika
                                                                 option(value="sk") Slovensko
 
+                                                    a.cart-terms-link(href="#") Beru na vědomí zpracování osobních údajů
+
+
                                                     .form-group
                                                         .form-check
                                                             label.form-check__label.cart-register-toggler
@@ -205,7 +208,12 @@ html(lang=lang)
                                                             label(for="register_form_register_password") Heslo
                                                             span(id="show_password_toggler" data-toggle="tooltip" data-placement="top" title="Zobrazit/Skrýt heslo") #[span.fa.fa-eye]
                                                             input.form-control(type="password" name="register_form_register_password" id="register_form_register_password" autocomplete="off")
-
+                                                        .form-group
+                                                            .form-check
+                                                                label.form-check__label
+                                                                    input.form-check__input(type="checkbox" name="register_form_register_terms")
+                                                                    | Souhlasím se #[a.form-check__link(href="#") zpracováním osobních údajů]
+                                                                    span.form-check__box.checkbox
 
                                                 .form-group
                                                     .form-check
@@ -214,12 +222,6 @@ html(lang=lang)
                                                             | Zasílat novinky a propagační materiály na email
                                                             span.form-check__box.checkbox
 
-                                                .form-group
-                                                    .form-check
-                                                        label.form-check__label
-                                                            input.form-check__input(type="checkbox" name="register_form_terms")
-                                                            | Souhlasím se zpracováním osobních údajů
-                                                            span.form-check__box.checkbox
 
                                                 button.d-none(type="submit" id="register_form_submit") Souhrn objednávky
 
