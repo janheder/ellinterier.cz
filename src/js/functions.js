@@ -79,28 +79,23 @@ policyURL: 'http://www.google.com/intl/en/policies/technologies/cookies/',
 });
 
 
-//OBJECT FIT FALLBACK
+// =============================================================================
+// OBJECT FIT FALLBACK
+// =============================================================================
 
 var styletotest = "object-fit";
-
-if (styletotest in document.body.style)
-{
+if (styletotest in document.body.style){
     /*alert("The " + styletotest + " property is supported");*/
-
-} else {
-
-    /*alert("The " + styletotest + " property is NOT supported"); */
-
-      $('.post__image-container').each(function () {
-    var $container = $(this),
+}
+else {
+    $('.post__image-container').each(function () {
+        var $container = $(this),
         imgUrl = $container.find('img').attr('data-src');
-    if (imgUrl) {
-        $(this).css('backgroundImage', 'url(' + imgUrl + ')')
-        /*$('.post__image-container').addClass('compat-object-fit');*/
-        $('.post__featured-image').css('display','none');
-    }  
-  });
-
+        if (imgUrl) {
+            $(this).css('backgroundImage', 'url(' + imgUrl + ')')
+            $('.post__featured-image').css('display','none');
+        }  
+    });
 }
 
 
