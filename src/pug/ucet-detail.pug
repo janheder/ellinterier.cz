@@ -181,6 +181,15 @@ html(lang=lang)
                                                         option(value="sk") Slovensko
 
                                         .form-group
+                                            .form-check
+                                                label.form-check__label
+                                                    input.form-check__input(type="checkbox" name="register_form_email_marketing")
+                                                    span.form-check__inline Chci odebírat newsletter a souhlasím se #[a.form-check__link(href="#") zpracováním osobních údajů] za účelem zasílání informací o novinkách a slevách.
+                                                    span.form-check__box.checkbox
+
+                                        a.delete-acount(href="#") Trvale smazat účet
+
+                                        .form-group
                                             button.form-control.btn(type="submit" name="register_form_submit" id="register_form_submit") Potvrdit úpravy
 
                             .col-12.col-sm-12.col-md-12.col-lg-6.col-xl-6.login-form-col

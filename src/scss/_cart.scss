@@ -821,3 +821,17 @@
     display: block;
     margin-bottom: 4rem;
 }
+
+.delete-acount{
+	background: $bg-red;
+	padding: 5px 10px;
+	color: $text-white;
+	margin-bottom: 2rem;
+	display: block;
+
+	&:hover, &:active, &:focus{
+		color: $text-white;
+		text-decoration: none;
+		background: $bg-dark;
+	}
+}
