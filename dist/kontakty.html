@@ -431,7 +431,7 @@
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                       <div class="page-contact__col">
                         <h3>Reklamace</h3>
-                        <p>Zde podávejte případné reklamace. Reklamaci provedete kliknutím na tlačítko níže s názvem REKLAMACE. Máte zde možnost přiložit fotografie a popsat případné nedostatky.</p><a class="btn" href="#">Reklamační formulář</a>
+                        <p>Zde podávejte případné reklamace. Reklamaci provedete kliknutím na tlačítko níže s názvem REKLAMACE. Máte zde možnost přiložit fotografie a popsat případné nedostatky.</p><a class="btn" href="#" data-toggle="modal" data-target="#modal-reklamace">Reklamační formulář</a>
                       </div>
                     </div>
                   </div>
@@ -443,6 +443,55 @@
             </div>
           </div>
         </main>
+      </div>
+    </div>
+    <div class="modal fade" id="modal-reklamace" tabindex="-1" role="dialog" aria-labelledby="modal-reklamace" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-add-to-cart-heading">Reklamace</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="cross-icon"></span></button>
+          </div>
+          <div class="modal-body">
+            <form class="register-form" method="post" action="" name="reklamace_form" id="reklamace_form">
+              <div class="form-group">
+                <label for="reklamace_form_name">Jméno a příjmení:</label>
+                <input class="form-control" type="text" name="reklamace_form_name" id="reklamace_form_name" autocomplete="given-name" required>
+              </div>
+              <div class="form-group">
+                <label for="reklamace_form_number">Číslo objednávky:</label>
+                <input class="form-control" type="text" name="reklamace_form_number" id="reklamace_form_number" required>
+              </div>
+              <div class="form-group">
+                <label for="reklamace_form_tel">Telefon:</label>
+                <input class="form-control" type="text" name="reklamace_form_tel" id="reklamace_form_tel" required>
+              </div>
+              <div class="form-group">
+                <label for="reklamace_form_email">Email:</label>
+                <input class="form-control" type="email" name="reklamace_form_email" id="reklamace_form_email" required>
+              </div>
+              <div class="form-group">
+                <label for="reklamace_form_textfield">Vyjádření k závadě:</label>
+                <textarea class="form-control" rows="5" name="reklamace_form_textfield" id="reklamace_form_textfield" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="reklamace_form_textfield2">Případný návrh řešení problému:</label>
+                <textarea class="form-control" rows="5" name="reklamace_form_textfield2" id="reklamace_form_textfield2"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="reklamace_form_file">Příloha:</label>
+                <input class="form-control" type="file" name="reklamace_form_file" id="reklamace_form_file">
+              </div>
+              <div class="form-group">
+                <label for="reklamace_form_question">Kontrolní otázka: Kolik je dva plus dva:</label>
+                <input class="form-control" type="number" name="reklamace_form_question" id="reklamace_form_question" required>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-dark" type="submit">Odeslat reklamaci</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
     <section class="news-bottom">

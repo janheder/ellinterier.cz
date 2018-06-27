@@ -86,3 +86,10 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+#modal-reklamace .modal-dialog {
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+}
